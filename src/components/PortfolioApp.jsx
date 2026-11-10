@@ -49,7 +49,10 @@ export default function PortfolioApp({ projects, cvUrl, avatarUrl }) {
             </div>
           </div>
           <p className="max-w-2xl text-sm text-zinc-300 leading-relaxed mt-6">
-            I started coding at 14 on an Olivetti M19. Today, I lead platform engineering and AI initiatives at Sky, helping editorial and video teams work through reliable, self-service platforms. My experience spans DevOps, test automation, and AWS and GCP. I build smart systems that remove friction and give people more freedom to do meaningful work.
+            I started coding at 14 on an Olivetti M19. <br/>
+            Today, I lead platform engineering and AI initiatives at Sky, helping editorial and video teams work through reliable, self-service platforms. <br/>
+            My experience spans DevOps, test automation, and AWS and GCP. <br/>
+            I build smart systems that remove friction and give people more freedom to do meaningful work.
           </p>
         </header>
 
