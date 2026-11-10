@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gdeber.github.io/debe-portfolio/sitemap-index.xml

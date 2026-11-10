@@ -9,7 +9,7 @@ const categoryColors = {
   Systems: 'text-emerald-300',
 };
 
-export default function PortfolioApp({ projects, cvUrl }) {
+export default function PortfolioApp({ projects, cvUrl, avatarUrl }) {
   const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -25,7 +25,14 @@ export default function PortfolioApp({ projects, cvUrl }) {
         
         <header className="mb-12 border-b border-zinc-800/80 pb-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div>
+            <img
+              src={avatarUrl}
+              alt="Portrait of Gualtiero Debernardi"
+              width="96"
+              height="96"
+              className="w-24 h-24 rounded-full object-cover border border-zinc-800 shrink-0"
+            />
+            <div className="flex-1">
               <h1 className="text-xl font-bold tracking-tight text-white">Gualtiero Debernardi</h1>
               <p className="text-sm text-emerald-300 mt-1">Platform &amp; Cloud Engineer · Developer Experience · AI Lead</p>
               <p className="text-xs text-zinc-500 mt-1">SRE · Security Evangelist · Community Builder</p>

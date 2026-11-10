@@ -25,9 +25,10 @@ const formattedProjects = allProjects.map(p => ({
 }));
 
 const cvUrl = `${baseUrl}cv.pdf`;
+const avatarUrl = `${baseUrl}avatar.jpg`;
 ---
 
 <Layout title="Gualtiero Debernardi | Platform & Cloud Engineer | AI Lead">
   <!-- Passiamo l'array completo al componente React -->
-  <PortfolioApp client:load projects={formattedProjects} cvUrl={cvUrl} />
+  <PortfolioApp client:load projects={formattedProjects} cvUrl={cvUrl} avatarUrl={avatarUrl} />
 </Layout>
