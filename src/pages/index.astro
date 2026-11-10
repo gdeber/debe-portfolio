@@ -1,11 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import PortfolioApp from '../components/PortfolioApp.jsx';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allProjects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+// Mappiamo correttamente tutti i campi inclusi categoria e tags
+const formattedProjects = allProjects.map(p => ({
+  title: p.data.title,
+  category: p.data.category,
+  description: p.data.description,
+  website: p.data.website ?? (p.id === 'mixart-aps' ? 'https://mixartaps.org' : undefined),
+  tags: p.data.tags, // <- Ripristinati i tag
+  body: p.body,      // <- Corpo completo del markdown per la modale
+}));
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Gualtiero Debernardi | Platform & Cloud Engineer | AI Lead">
+  <!-- Passiamo l'array completo al componente React -->
+  <PortfolioApp client:load projects={formattedProjects} />
 </Layout>

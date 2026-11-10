@@ -1,46 +1,24 @@
-# Astro Starter Kit: Basics
+# Gualtiero Debernardi Portfolio
+
+Personal portfolio built with Astro, React, and Tailwind CSS.
+
+## Development
+
+Requires Node.js 22.23.4 or newer.
 
 ```sh
-npm create astro@latest -- --template basics
+npm ci
+npx astro dev --background
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Manage the background dev server with `npx astro dev status`, `npx astro dev logs`, and `npx astro dev stop`.
 
-## 🚀 Project Structure
+## Projects
 
-Inside of your Astro project, you'll see the following folders and files:
+Project entries live in `src/content/projects/` as Markdown files. Each entry requires a numeric `order`, `title`, `category`, `description`, and `tags`. Lower order values appear first. Available categories are defined in `src/content/project-categories.ts`.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Deployment
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The GitHub Actions workflow in `.github/workflows/deploy.yml` builds the site and deploys `dist/` to GitHub Pages on pushes to `main` or a manual workflow run. The production site and repository base path are configured in `astro.config.mjs`.

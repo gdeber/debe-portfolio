@@ -1,5 +1,18 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+import react from '@astrojs/react';
+
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  // Sostituisci con il tuo utente e il nome della repo
+  site: 'https://gdeber.github.io',
+
+  base: '/debe-portfolio',
+  output: 'static',
+  integrations: [react()],
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
+});
