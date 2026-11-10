@@ -11,6 +11,10 @@ const projectsCollection = defineCollection({
     category: z.enum(PROJECT_CATEGORIES),
     description: z.string(),
     website: z.string().url().optional(),
+    resources: z.array(z.object({
+      title: z.string(),
+      path: z.string(),
+    })).optional(),
     tags: z.array(z.string()),
     date: z.coerce.date().optional(),
     draft: z.boolean().optional(),

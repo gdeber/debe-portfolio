@@ -1,6 +1,6 @@
 ---
 title: "Multi-Cloud Disaster Recovery"
-order: 4
+order: 5
 category: "Infrastructure"
 description: "Designed a recovery system that can reconstruct Sky's AWS and GCP infrastructure across all channels from a single VM in under two hours."
 tags: ["AWS", "GCP", "Disaster Recovery", "Automation", "Resilience"]

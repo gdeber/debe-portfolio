@@ -1,8 +1,8 @@
 ---
 title: "Home Assistant MQTT Auto"
-order: 8
+order: 9
 category: "Personal"
-description: "Automazione domotica locale per la gestione dei flussi energetici e ricarica EV tramite protocollo MQTT."
+description: "Local home automation for managing energy flows and EV charging over MQTT."
 tags: ["Python", "Home Assistant", "MQTT", "Docker"]
 date: 2026-10-15
 ---

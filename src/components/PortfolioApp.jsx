@@ -9,7 +9,7 @@ const categoryColors = {
   Systems: 'text-emerald-300',
 };
 
-export default function PortfolioApp({ projects }) {
+export default function PortfolioApp({ projects, cvUrl }) {
   const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -29,6 +29,12 @@ export default function PortfolioApp({ projects }) {
               <h1 className="text-xl font-bold tracking-tight text-white">Gualtiero Debernardi</h1>
               <p className="text-sm text-emerald-300 mt-1">Platform &amp; Cloud Engineer · Developer Experience · AI Lead</p>
               <p className="text-xs text-zinc-500 mt-1">SRE · Security Evangelist · Community Builder</p>
+              <nav aria-label="Profile links" className="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-xs">
+                <a href="https://github.com/gdeber/" target="_blank" rel="noreferrer" className="text-zinc-300 hover:text-emerald-300 transition-colors">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/gualtiero-debernardi/" target="_blank" rel="noreferrer" className="text-zinc-300 hover:text-emerald-300 transition-colors">LinkedIn ↗</a>
+                <a href="mailto:gualtiero.debernardi@gmail.com" className="text-zinc-300 hover:text-emerald-300 transition-colors">Email</a>
+                <a href={cvUrl} target="_blank" rel="noreferrer" className="text-zinc-300 hover:text-emerald-300 transition-colors">CV (PDF) ↗</a>
+              </nav>
             </div>
             <div className="flex items-center gap-2 sm:mt-1">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -123,6 +129,26 @@ export default function PortfolioApp({ projects }) {
                 </a>
               )}
 
+              {selectedProject.resources?.length > 0 && (
+                <section className="mt-5">
+                  <h4 className="text-[11px] font-semibold text-zinc-500 uppercase tracking-widest">Resources</h4>
+                  <ul className="mt-2 flex flex-col gap-2">
+                    {selectedProject.resources.map((resource) => (
+                      <li key={resource.href}>
+                        <a
+                          href={resource.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-sm text-emerald-300 hover:text-emerald-200 transition-colors"
+                        >
+                          {resource.title} ↗
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
               {/* Tag nella modale */}
               <div className="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-zinc-800">
                 {selectedProject.tags && selectedProject.tags.map((tag, tIdx) => (
@@ -137,7 +163,7 @@ export default function PortfolioApp({ projects }) {
                   onClick={() => setSelectedProject(null)}
                   className="px-4 py-2 text-xs bg-zinc-100 hover:bg-white text-zinc-950 rounded-lg font-medium transition-colors"
                 >
-                  Chiudi dettagli
+                  Close details
                 </button>
               </div>
             </div>

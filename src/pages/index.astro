@@ -6,6 +6,9 @@ import { getCollection } from 'astro:content';
 const allProjects = (await getCollection('projects')).sort(
   (a, b) => a.data.order - b.data.order,
 );
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 
 // Mappiamo correttamente tutti i campi inclusi categoria e tags
 const formattedProjects = allProjects.map(p => ({
@@ -13,12 +16,18 @@ const formattedProjects = allProjects.map(p => ({
   category: p.data.category,
   description: p.data.description,
   website: p.data.website ?? (p.id === 'mixart-aps' ? 'https://mixartaps.org' : undefined),
+  resources: p.data.resources?.map(resource => ({
+    title: resource.title,
+    href: `${baseUrl}${encodeURIComponent(resource.path)}`,
+  })),
   tags: p.data.tags, // <- Ripristinati i tag
   body: p.body,      // <- Corpo completo del markdown per la modale
 }));
+
+const cvUrl = `${baseUrl}cv.pdf`;
 ---
 
 <Layout title="Gualtiero Debernardi | Platform & Cloud Engineer | AI Lead">
   <!-- Passiamo l'array completo al componente React -->
-  <PortfolioApp client:load projects={formattedProjects} />
+  <PortfolioApp client:load projects={formattedProjects} cvUrl={cvUrl} />
 </Layout>
