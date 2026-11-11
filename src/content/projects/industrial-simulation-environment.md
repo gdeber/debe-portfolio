@@ -1,6 +1,6 @@
 ---
 title: "Industrial Virtual Test Environment"
-order: 8
+order: 80
 category: "Systems"
 description: "Created a virtual commissioning environment combining VMware, Proxmox, and Siemens PLCSIM to reduce testing time and dependence on physical equipment."
 tags: ["VMware", "Proxmox", "Siemens PLCSIM", "Industrial Automation", "Simulation"]

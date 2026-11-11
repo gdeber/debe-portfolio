@@ -1,6 +1,6 @@
 ---
 title: "Mixart APS"
-order: 10
+order: 100
 category: "Personal"
 description: "President of Mixart APS, a non-profit organization."
 website: "https://mixartaps.org"

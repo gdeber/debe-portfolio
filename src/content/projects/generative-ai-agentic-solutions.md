@@ -1,6 +1,6 @@
 ---
 title: "Generative AI and Agentic AI Solutions"
-order: 2
+order: 10
 category: "GenAI"
 description: "Led the AI roadmap and Agile teams delivering production-ready LLM, Generative AI, and agent-based solutions, including conversational bots and work with Google ADK."
 tags: ["LLMs", "Generative AI", "Agentic AI", "Conversational Bots", "Google ADK", "Leadership"]

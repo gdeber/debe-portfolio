@@ -1,6 +1,6 @@
 ---
 title: "AI Team Leadership"
-order: 3
+order: 20
 category: "People"
 description: "Led two Agile teams as AI Lead and Software Engineering Manager, driving the AI roadmap while empowering people through coaching and shared ownership."
 tags: ["People Management", "Coaching", "Empowerment", "Agile Leadership", "AI Roadmap"]

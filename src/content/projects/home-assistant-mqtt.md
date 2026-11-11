@@ -1,6 +1,6 @@
 ---
 title: "Home Assistant MQTT Auto"
-order: 9
+order: 90
 category: "Personal"
 description: "Local home automation for managing energy flows and EV charging over MQTT."
 tags: ["Python", "Home Assistant", "MQTT", "Docker"]

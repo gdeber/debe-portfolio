@@ -1,6 +1,6 @@
 ---
 title: "Editorial and Video Platform Engineering"
-order: 1
+order: 30
 category: "Infrastructure"
 description: "Led two platform engineering teams serving editorial and video groups, defining a platform-as-a-product strategy for self-service developer experience."
 tags: ["Platform Engineering", "Developer Experience", "Leadership", "Self-Service"]

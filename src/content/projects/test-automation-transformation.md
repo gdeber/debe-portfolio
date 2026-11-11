@@ -1,6 +1,6 @@
 ---
 title: "Cross-Team Test Automation"
-order: 6
+order: 60
 category: "Systems"
 description: "Moved delivery teams from fully manual testing to more than 100 automated tests per sprint, establishing shared frameworks and quality standards."
 tags: ["Test Automation", "Quality Engineering", "Selenium", "Developer Experience"]

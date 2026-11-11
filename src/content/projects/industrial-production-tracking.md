@@ -1,6 +1,6 @@
 ---
 title: "Industrial Production Tracking System"
-order: 7
+order: 70
 category: "Systems"
 description: "Built an end-to-end pipe production tracking system spanning manufacturing through shipping, improving data accuracy across international operations."
 tags: [".Net", "Industrial Systems", "Production Tracking", "Data Quality"]

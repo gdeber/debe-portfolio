@@ -1,6 +1,6 @@
 ---
 title: "Music and Audio Engineering"
-order: 11
+order: 110
 category: "Personal"
 description: "Musician and professional audio engineer working with guitar, bass, piano, Linux DAWs, open-source audio software, and Behringer and Soundcraft digital mixers."
 tags: ["Guitar", "Bass", "Piano", "Linux DAW", "Open-Source Audio", "Live Sound", "Behringer", "Soundcraft"]

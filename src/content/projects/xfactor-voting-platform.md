@@ -1,6 +1,6 @@
 ---
 title: "X Factor Live Voting Platform"
-order: 4
+order: 40
 category: "Infrastructure"
 description: "Designed and helped operate a voting platform for X Factor, engineered for audience-driven traffic peaks of 75,000 requests per second."
 tags: ["SRE", "Scalability", "Resilience", "Observability", "Live Events"]
